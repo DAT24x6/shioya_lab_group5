@@ -11,14 +11,15 @@
     </head>
 
     <body>
+        <form action="./index2.html" method="GET">
         <div class="name">
             <label for="yourName">名前を入力して下さい</label><br>
-            <input type="text" id="yourName">
+            <input type="text" id="yourName" name="yourName">
         </div>
 
         <div class="picture">
             <label for="yourPicture">写真をアップロードして下さい</label><br>
-            <input type="file" id="yourPicture">
+            <input type="file" id="yourPicture" name="yourPicture">
         </div>
 
         <div class="job">
@@ -32,7 +33,7 @@
 
         <div class="syozoku">
             <label for="yourSyozoku">所属を入力して下さい</label><br>
-            <input type="text" id="yourSyozoku">
+            <input type="text" id="yourSyozoku" name="yourSyozoku">
         </div>
 
         <div class="birthday">
@@ -231,7 +232,8 @@
 
         </div>
     </ul>
-
+    <button type="submit">送信</button>
+        </form>
     <button onclick="history.back()">最初に戻る</button>
 
     </body>
