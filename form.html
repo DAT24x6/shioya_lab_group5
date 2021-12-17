@@ -10,34 +10,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     </head>
 
+    <!--ヘッダー-->
+    <header>
+        <h1>登録フォーム</h1>
+        <nav class="gnav">
+            <ul class="menu">
+                <li><a href="index.html" class="head">◆トップに戻る</a></li>
+                <li><a href="" class="head">◆ヘルプ</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <body>
+        <main>
         <form action="./result.html" method="GET">
-            <div class="name">
-                <label for="yourName">名前を入力して下さい</label><br>
-                <input type="text" id="yourName" name="yourName">
+            <div class="cp_iptxt">
+                <p class="bold">
+                <label for="yourName">名前を入力して下さい</label></p>
+                <input type="text" id="yourName" name="yourName" placeholder="例）山田 太郎">
             </div>
 
-            <div class="picture">
-                <label for="yourPicture">写真をアップロードして下さい</label><br>
-                <input type="file" id="yourPicture" name="yourPicture">
+            <div class="cp_iptxt">
+                <p class="bold">
+                <label for="yourmail">メールアドレスを入力してください</label></p>
+                <input type="text" placeholder="例）○△□＠email.com">
             </div>
 
-            <div class="job">
-                <label for="yourJob">職業を選択して下さい</label><br>
-                <select name="yourJob">
-                    <option value="">-</option>
-                    <option value="学生">学生</option>
-                    <option value="会社員">会社員</option>
-                </select>
+            <div class="cp_iptxt">
+                <p class="bold">
+                <label for="yourPicture">写真をアップロードして下さい</label></p>
+                <input type="file" id="yourPicture" name="yourPicture" accept="image/jpeg, image/png">
             </div>
 
-            <div class="syozoku">
-                <label for="yourSyozoku">所属を入力して下さい</label><br>
-                <input type="text" id="yourSyozoku" name="yourSyozoku">
+            <div class="cp_iptxt">
+                <p class="bold">
+                 <label for="gender">性別を選択してください</label>
+                </p>
+                 <label><input type="radio" name="job" value="男性">男性</label>
+                 <label><input type="radio" name="job" value="女性">女性</label>
+                 <label><input type="radio" name="job" value="その他">その他</label>
             </div>
 
-            <div class="birthday">
+            <div class="cp_iptxt">
+                <p class="bold">
                 <label for="yourBirthDay">生年月日を選択して下さい</label><br>
+                </p>
                 <select name="year">
                     <option value="">-</option>
                     <option value="1900">1900</option>
@@ -173,7 +190,7 @@
                     <option value="2030">2030</option>
                 </select>
 
-     年
+                <label>年</label>
 
                 <select name="month">
                     <option value="">-</option>
@@ -191,7 +208,7 @@
                     <option value="12">12</option>
                 </select>
 
-    月
+                <label>月</label>
 
                 <select name="day">
                     <option value="">-</option>
@@ -228,13 +245,37 @@
                     <option value="31">31</option>
                 </select>
 
-    日
+                <label>日</label>
+
 
             </div>
-            
-        <button type="submit">送信</button>
-        </form>
-    <button onclick="history.back()">最初に戻る</button>
 
+            <div class="cp_iptxt">
+                <p class="bold">
+                <label for="yourJob">職業を選択して下さい</label></p>
+                <select name="yourJob">
+                    <option value="">-</option>
+                    <option value="学生">学生</option>
+                    <option value="会社員">会社員</option>
+                    <option value="専業主婦">専業主婦</option>
+                    <option value="公務員">公務員</option>
+                    <option value="その他">その他</option>
+                </select>
+            </div>
+
+            <div class="cp_iptxt">
+                <p class="bold">
+                <label for="yourSyozoku">所属を入力して下さい</label></p>
+                <input type="text" id="yourSyozoku" name="yourSyozoku" placeholder="例）○○株式会社">
+            </div>
+            
+            <br>
+            
+            
+        <a href="result.html" button type="submit" class="btn btn-gradient"><span>送信する</span></botton></a>
+        </form>
+        <br>
+        <a href="" button onclick="history.back()" class="btn btn-backhome">最初に戻る</button></a>
+   </main>
     </body>
 </html>
