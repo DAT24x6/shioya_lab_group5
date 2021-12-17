@@ -1,22 +1,54 @@
 @charset "UTF-8";
 
-h1{
-    background-color: #84C0DA; 
-    color: #ffffff;
-    font-size: 30px;
- }
 
- h2{
-	width: 35.33%;
-	margin: 30px;
-    font-size: 20px;
- }
+body {
+  padding-top: 90px; /* ヘッダーの後ろに要素が隠れないようにするため */
+}
+
+header {
+  width: 100%; /* 幅いっぱいを指定 */
+  height: 50px; /* 高さを50pxに指定 */
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(left, #84C0DA, #005EAC, #003682);
+
+  background-image: linear-gradient(90deg, #84C0DA, #005EAC, #003682);
+  padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+  box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+  position: fixed; /* ウィンドウを基準に画面に固定 */
+  top: 0; /* 上下の固定位置を上から0pxにする */
+  left: 0; /* 左右の固定位置を左から0pxにする */
+  display: flex; /* 中の要素を横並びにする */
+  align-items: center; /* 中の要素を上下中央に並べる */
+}
+
+header .gnav .menu {
+  display: flex; /* 中の要素を横並びにする */
+}
+
+header .gnav .menu li {
+  list-style: none; /* リストの[・]を消す */
+}
+
+header .gnav .menu li + li {
+  margin-left: 40px; /* メニューそれぞれに間隔をあけるため */
+}
+
+main {
+  height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
+  
+}
+
+.head{
+    color: #ffffff;
+    font-weight: bold;
+}
 
 
 .cp_iptxt {
 	position: relative;
 	width: 35.33%;
-	margin: 30px 3%;
+	margin: auto;
+  background-color: rgba(255, 255, 255, 0);
 }
 .cp_iptxt input[type='text'] {
 	font: 15px/24px sans-serif;
@@ -26,7 +58,9 @@ h1{
 	padding-left: 30px;
 	letter-spacing: 2px;
 	border: 0;
+  color: rgb(0, 0, 0);
 }
+
 
 .cp_iptxt input[type='text']:focus {
 	outline: none;
@@ -44,22 +78,31 @@ h1{
 	content: '';
 	border-width: 0 2px 2px 2px;
 	border-style: solid;
-	border-color: #39a9f3;
+	border-color: #84C0DA ;
 }
 
 
 p{
-    font-size: 20px;
+    font-size: 15px;
     box-sizing: border-box;
     background-color: #ebebeb;
     line-height: 2;
 }
 
 .bold {
-    font-weight: bold;
+    font-weight:normal;
+}
+
+.radio{
+  font-weight: bold;
 }
 
 
+label{
+  font-size: 15px;
+  box-sizing: border-box;
+  line-height: 2;
+}
 
 *,
 *:before,
@@ -78,7 +121,7 @@ html {
 a.btn,
 button.btn {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.5;
   position: relative;
   display: inline-block;
@@ -98,11 +141,14 @@ button.btn {
   border-radius: 0.5rem;
 }
 
-a.btn {
-  font-weight: normal;
-
-  color: #fff;
+a.btn-gradient {
+  display:block;
+  width:30%;
+  margin:0 auto;
+  font-weight: bold;
   border-radius: 0;
+  color: #fff;
+  
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -110,12 +156,13 @@ a.btn {
     color-stop(40%, #ff3cac),
     to(#562b7c)
   );
-  background-image: -webkit-linear-gradient(left, #84C0DA 40%, #003682 100%);
-  background-image: linear-gradient(90deg, #84C0DA 40%, #003682 100%);
+  background-image: -webkit-linear-gradient(left, #84C0DA 40%, #005EAC 100%);
+  background-image: linear-gradient(90deg, #84C0DA 40%, #005EAC 100%);
 }
 
-a.btn:after {
+a.btn-gradient:after {
   position: absolute;
+  border-radius: 0;
   top: 0;
   left: 0;
 
@@ -140,12 +187,32 @@ a.btn:after {
   background-image: linear-gradient(90deg, #84C0DA, #005EAC, #003682);
 }
 
+a.btn-gradient span {
+  position: relative;
+  z-index: 1;
+}
 
-
-a.btn:hover {
+a.btn-gradient:hover {
   color: #fff;
 }
 
-a.btn:hover:after {
+a.btn-gradient:hover:after {
   opacity: 0;
 }
+
+a.btn-backhome {
+    border: 2px solid #005EAC;
+    border-radius: 0;
+    background: #fff;
+    display:block;
+    width:10%;
+    font-size: 5%;
+    color: #005EAC;
+    margin: auto;
+  }
+  
+  a.btn-backhome:hover {
+    color: #fff;
+    background: #005EAC;
+  }
+  
