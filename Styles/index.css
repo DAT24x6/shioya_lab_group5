@@ -171,3 +171,9 @@ h1{
     background-color: #005EAC;
     color: #ffffff
   }
+
+  .copy{
+      font-size: 15%;
+      color: rgb(92, 92, 92);
+      text-align: center;
+  }
