@@ -8,6 +8,101 @@
     <script type="text/javascript" src="Scripts/result.js"></script> 
     <title>自己紹介アプリ - 結果</title>
 </head>
+
+<!--ヘッダー-->
+<header>
+    <h1>自己紹介カード</h1>
+    <nav class="gnav">
+        <ul class="menu">
+            <li><a href="index.html" class="head">◆トップに戻る</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+
+
 <body>
+    <!--結果をテーブルに変換-->
+    <table>
+        <tr>
+          <th>
+           <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+              名前
+           </th>
+         <td>
+           <script>
+               document.write("<p class= 'namae'>" + namae + "</p>");
+             </script>
+           </td>
+        </tr>
+
+        <tr>
+          <th>
+             <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+             メールアドレス
+          </th>
+          <td>
+           <script>
+             document.write("<p class= 'email'>" + email + "</p>");
+           </script>
+         </td>
+        </tr>
+
+        <tr>
+         <th>
+           <i class="fa fa-heart fa-lg fa-fw" aria-hidden="true"></i>
+            性別</th>
+         <td>
+           <script>
+               document.write("<p class= 'job'>" + job + "</p>");
+             </script>
+           </td>
+        </tr>
+        
+        <tr>
+         <th>
+            <i class="fa fa-shopping-bag fa-lg fa-fw" aria-hidden="true"></i>
+             職業</th>
+         <td>
+           <script>
+               document.write("<p class= 'job'>" + job + "</p>");
+             </script>
+           </td>
+        </tr>
+
+        <tr>
+           <th>
+               <i class="fa fa-id-card fa-lg fa-fw" aria-hidden="true"></i>
+               所属</th>
+           <td>
+               <script>
+               document.write("<p class= 'gakubu'>" + gakubu + "</p>");
+             </script>
+           </td>
+         </tr>
+
+         <tr>
+           <th>
+               <i class="fa fa-calendar-alt fa-lg fa-fw" aria-hidden="true"></i>
+               生年月日
+           </th>
+           <td>
+               <script>
+               document.write("<p class= 'year'>" + year + "</p>");
+               </script>
+               <p>年</p>
+               <script>
+               document.write("<p class= 'month'>" + month + "</p>");
+               </script>
+               <p>月</p>
+               <script>
+               document.write("<p class= 'day'>" + day + "</p>");
+               </script>
+               <p>日</p>
+           </td>
+         </tr>
+     </table>
+
 </body>
 </html>
