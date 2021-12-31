@@ -10,6 +10,8 @@ const shasin = queryString.get('yourPicture');
 document.write("<img src=\"" + shasin + "\">");
 const email = queryString.get('email');
 
+const gender = queryString.get('gender');
+
 const job = queryString.get('yourJob');
 
 const gakubu = queryString.get('yourSyozoku');
