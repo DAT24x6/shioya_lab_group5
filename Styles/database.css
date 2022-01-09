@@ -1,0 +1,111 @@
+body {
+    padding-top: 90px;
+}
+  
+header {
+    width: 100%; 
+    height: 50px; 
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(left, #84C0DA, #005EAC, #003682);
+  
+    background-image: linear-gradient(90deg, #84C0DA, #005EAC, #003682);
+    padding: 20px 50px; 
+    box-sizing: border-box; 
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    display: flex;
+    align-items: center; 
+}
+  
+header .gnav .menu {
+    display: flex; 
+}
+  
+header .gnav .menu li {
+    list-style: none;
+}
+  
+header .gnav .menu li + li {
+    margin-left: 40px;
+}
+  
+main {
+    height: 100vw; 
+    
+}
+  
+.head{
+      color: #ffffff;
+      font-weight: bold;
+}
+
+
+
+
+
+p{
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+/* テーブル */
+table{
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 8px 0px;
+  }
+  
+  table tr{
+    border-bottom: solid 2px white;
+  }
+  
+  table tr:last-child{
+    border-bottom: none;
+  }
+  
+  table th{
+    position: relative;
+    text-align: left;
+    width: 20%;
+    background-image: -webkit-linear-gradient(left, #84C0DA 20%, #005EAC 100%);
+    background-image: linear-gradient(90deg, #84C0DA 20%, #005EAC 100%);  
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+
+ table th i{
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 9px 5px;
+	transition: 0.3s;
+	color: #ffffff;
+}
+
+  table th:after{
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top:calc(50% - 10px);
+    right:-10px;
+    border-left: 10px solid #005EAC;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  
+  table td{
+    text-align: left;
+    width: 50%;
+    text-align: center;
+    background-color: #eee;
+    padding: 10px 0;
+    
+  }

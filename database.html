@@ -2,28 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="Styles/database.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<header>
+    <h1>自己紹介カード</h1>
+    <nav class="gnav">
+        <ul class="menu">
+            <li><a href="index.html" class="head">◆トップに戻る</a></li>
+
+        </ul>
+    </nav>
+</header> 
 <body>
- <script>
-     const key1 =sessionStorage.getItem('key1');
-     document.write(key1)
-     const key2 =sessionStorage.getItem('key2');
-     document.write(key2)
-     const key3 =sessionStorage.getItem('key3');
-     document.write(key3)
-     const key4 =sessionStorage.getItem('key4');
-     document.write(key4)
-     const key5 =sessionStorage.getItem('key5');
-     document.write(key5)
-     const key6 =sessionStorage.getItem('key6');
-     document.write(key6)
-     const key7 =sessionStorage.getItem('key7');
-     document.write(key7)
-     const key8 =sessionStorage.getItem('key8');
-     document.write(key8)
- </script>   
+    <script type="text/javascript" src="Scripts/database.js"></script>
+   <!--結果をテーブルに変換-->
+   <table>
+    <tr>
+      <th>
+       <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+          名前
+       </th>
+     <td>
+       <script>
+           document.write("<p class= 'namae'>" + key1 + "</p>");
+         </script>
+       </td>
+    </tr>
+
+    <tr>
+      <th>
+         <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+         メールアドレス
+      </th>
+      <td>
+       <script>
+         document.write("<p class= 'email'>" + key2 + "</p>");
+       </script>
+     </td>
+    </tr>
+
+    <tr>
+     <th>
+       <i class="fa fa-heart fa-lg fa-fw" aria-hidden="true"></i>
+        性別</th>
+     <td>
+       <script>
+           document.write("<p class= 'gender'>" + key3 + "</p>");
+         </script>
+       </td>
+    </tr>
+    
+    <tr>
+     <th>
+        <i class="fa fa-shopping-bag fa-lg fa-fw" aria-hidden="true"></i>
+         職業</th>
+     <td>
+       <script>
+           document.write("<p class= 'job'>" + key4 + "</p>");
+         </script>
+       </td>
+    </tr>
+
+    <tr>
+       <th>
+           <i class="fa fa-id-card fa-lg fa-fw" aria-hidden="true"></i>
+           所属</th>
+       <td>
+           <script>
+           document.write("<p class= 'gakubu'>" + key5 + "</p>");
+         </script>
+       </td>
+     </tr>
+
+     <tr>
+       <th>
+           <i class="fa fa-calendar-alt fa-lg fa-fw" aria-hidden="true"></i>
+           生年月日
+       </th>
+       <td>
+           <script>
+           document.write("<p class= 'year'>" + key6 + "</p>");
+           </script>
+           <p>年</p>
+           <script>
+           document.write("<p class= 'month'>" + key7 + "</p>");
+           </script>
+           <p>月</p>
+           <script>
+           document.write("<p class= 'day'>" + key8 + "</p>");
+           </script>
+           <p>日</p>
+       </td>
+     </tr>
+ </table>
 </body>
 </html>
