@@ -5,6 +5,8 @@
     <link href="Styles/result.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script> 
     <script type="text/javascript" src="Scripts/result.js"></script> 
     <title>自己紹介アプリ - 結果</title>
 </head>
@@ -23,6 +25,7 @@
 
 
 <body>
+  <div id="qrmaker">
     <!--結果をテーブルに変換-->
     <table>
         <tr>
@@ -103,6 +106,28 @@
            </td>
          </tr>
      </table>
+     </div>
+<script>
+    function OnButtonClick() {
+      $(function (){
+      $("#qrmaker").html("");
+      $("#qrmaker").qrcode({text:"https://dat24x6.github.io/shioya_lab_group5/database.html"}); 
+    }
+);
+  }
+</script>
 
+  <script>
+    sessionStorage.setItem('key1', namae);
+    sessionStorage.setItem('key2', email);
+    sessionStorage.setItem('key3', gender);
+    sessionStorage.setItem('key4', job);
+    sessionStorage.setItem('key5', gakubu);
+    sessionStorage.setItem('key6', year);
+    sessionStorage.setItem('key7', month);
+    sessionStorage.setItem('key8', day);
+  </script>
+<a href="./database.html">aaaaa</a>
+<input type="button" value="QRコードを表示する" onclick="OnButtonClick();"/><br />
 </body>
 </html>
