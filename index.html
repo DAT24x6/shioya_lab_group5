@@ -24,8 +24,19 @@
         <button onclick="location.href='./form.html'" class="form">作る</button><br>
         <button onclick="location.href='./database.html'" class="result">見る</button><br>
         <button onclick="location.href='./QR.html'" class="give">渡す</button><br>
+        <input type="button" class="btn"id="btn" value="登録した内容を消去">
         </div>
-    
-        <p class="copy">&copy; 2021 - 2021 Lab_Group5.</p>
+        <br>
+        <p class="copy">&copy; 2021 - 2022 Lab_Group5.</p>
     </body>
+
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+           alert('現在のデータ数は' + localStorage.length+'個です。' ); //現在のデータ数
+           localStorage.clear();  //全データを消去
+    
+           alert('データが消去されました！' +'(データ数は'+ (localStorage.length)+'個です)' );  //データ総数を表示→0
+    
+         },false);
+        </script>
 </html>
